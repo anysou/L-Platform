@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION
+
+    defaultConfig {
+        minSdkVersion MIN_SDK_VERSION
+        targetSdkVersion TARGET_SDK_VERSION
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+repositories {
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:support-v4:${SUPPORT_SDK_VERSION}"
+    implementation "com.android.support:appcompat-v7:${SUPPORT_SDK_VERSION}"
+    implementation "com.android.support:recyclerview-v7:${SUPPORT_SDK_VERSION}"
+    implementation "com.android.support:design:${SUPPORT_SDK_VERSION}"
+
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+    /*阿里sdk*/
+    implementation files('libs/alipaySdk-20180403.jar')
+
+    /*微信 sdk*/
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+
+    /*qq sdk*/
+    implementation files('libs/open_sdk_r5990_lite.jar')
+
+    /*新浪微博sdk*/
+    implementation 'com.sina.weibo.sdk:core:4.2.7:openDefaultRelease@aar'
+}
