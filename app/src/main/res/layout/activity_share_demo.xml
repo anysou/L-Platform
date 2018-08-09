@@ -51,4 +51,10 @@
         android:onClick="openMiniProgram"
         android:text="直接打开小程序" />
 
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="senPYQ"
+        android:text="打开编辑朋友圈界面" />
 </LinearLayout>

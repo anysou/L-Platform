@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.auto:auto-common:0.10'
+    implementation 'com.google.auto.service:auto-service:1.0-rc4'
+    implementation 'com.squareup:javapoet:1.11.1'
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+if(uploadModule==1){
+    apply from:'jcent.gradle'
+}

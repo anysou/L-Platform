@@ -2,7 +2,8 @@ package com.platform.demo;
 
 import android.app.Application;
 
-import com.platform.app.config.PlatformConfigurator;
+import com.lu.platform.app.config.PlatformConfigurator;
+
 
 /**
  * @Author: luqihua

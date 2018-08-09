@@ -14,6 +14,9 @@ android {
     }
 
     buildTypes {
+        debug{
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -39,11 +42,16 @@ dependencies {
     implementation files('libs/alipaySdk-20180403.jar')
 
     /*微信 sdk*/
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+    api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
 
     /*qq sdk*/
     implementation files('libs/open_sdk_r5990_lite.jar')
 
     /*新浪微博sdk*/
     implementation 'com.sina.weibo.sdk:core:4.2.7:openDefaultRelease@aar'
+}
+
+
+if(uploadModule==0){
+    apply from:'jcent.gradle'
 }

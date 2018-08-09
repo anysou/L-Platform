@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="lu.lib_alipay">
+    package="com.lu.platform">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,18 +17,15 @@
         android:smallScreens="true" />
 
     <application>
-
         <activity
-            android:name="com.platform.app.share.ShareBaseActivity"
+            android:name="com.lu.platform.app.share.ShareBaseActivity"
             android:launchMode="singleTop"
             android:theme="@style/share.AppTheme" />
-
-
         <activity
-            android:name="com.platform.sdk.alipay.sdk.pay.H5PayDemoActivity"
+            android:name="com.lu.platform.sdk.alipay.sdk.pay.H5PayDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
-            android:screenOrientation="behind"/>
+            android:screenOrientation="behind" />
         <!-- alipay sdk begin -->
 
         <activity
@@ -36,17 +33,7 @@
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-
-        <!-- 微信支付回调 -->
-        <activity
-            android:name="com.platform.demo.wxapi.WXPayEntryActivity"
-            android:exported="true"
-            android:launchMode="singleTop" />
-        <activity
-            android:name="com.platform.demo.wxapi.WXEntryActivity"
-            android:exported="true"
-            android:launchMode="singleInstance" />
+            android:windowSoftInputMode="adjustResize|stateHidden" />
 
         <!-- qq-sdk -->
         <activity
@@ -59,13 +46,13 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="tencent1105457392" />
+                <data android:scheme="tencent1106234694" />
             </intent-filter>
         </activity>
+
     </application>
+
 
 </manifest>
