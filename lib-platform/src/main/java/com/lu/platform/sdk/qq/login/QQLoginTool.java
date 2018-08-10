@@ -3,6 +3,7 @@ package com.lu.platform.sdk.qq.login;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 
 import com.lu.platform.app.config.ConfigEntity;
 import com.lu.platform.app.config.Constants;
@@ -30,13 +31,11 @@ public class QQLoginTool {
     }
 
     public void login(Activity activity, final String openId, final String accessToken, final String expiresIn) {
-        mTencent.setOpenId(openId);
-        mTencent.setAccessToken(accessToken, expiresIn);
-        if (!mTencent.isSessionValid())
-            mTencent.login(activity, "get_user_info", mIUiListener);
-        else {
-            mTencent.logout(activity);
+        if (!TextUtils.isEmpty(openId) && !TextUtils.isEmpty(accessToken)) {
+            mTencent.setAccessToken(accessToken, expiresIn);
+            mTencent.setOpenId(openId);
         }
+        mTencent.login(activity, "get_user_info", mIUiListener);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -51,12 +50,12 @@ public class QQLoginTool {
 
         @Override
         public void onError(UiError uiError) {
-            LoginResult.error(Constants.QQ,uiError.errorMessage);
+            LoginResult.error(Constants.QQ, uiError.errorMessage);
         }
 
         @Override
         public void onCancel() {
-           LoginResult.error(Constants.QQ, "用户取消操作");
+            LoginResult.error(Constants.QQ, "用户取消操作");
         }
     };
 }
