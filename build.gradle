@@ -42,8 +42,8 @@ ext {
 
     //jcent.gradle脚本变量
 //    ================================
-//    uploadModule = 0//上传lib-platform
-    uploadModule = 1//上传lib-processor
+    uploadModule = 0//上传lib-platform
+//    uploadModule = 1//上传lib-processor
     //SDK版本
     lib_Version = '1.0'
 //    ================================
