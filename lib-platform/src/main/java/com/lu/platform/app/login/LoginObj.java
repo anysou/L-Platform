@@ -10,7 +10,7 @@ import java.io.Serializable;
  * date:2018/8/8
  * description:
  **/
-public class LoginObj implements Serializable, Parcelable {
+public class LoginObj implements  Parcelable {
 
     //======微信登录返回示例
     /**

@@ -48,9 +48,9 @@ public class LoginBaseActivity extends PlatformBaseDialog implements View.OnClic
     private WXLoginTool mWxLoginTool;
     private QQLoginTool mQqLoginTool;
 
-    protected static void launch(Activity activity, ShareParams params) {
+    protected static void launch(Activity activity, LoginObj loginObj) {
         Intent intent = new Intent(activity, LoginBaseActivity.class);
-        intent.putExtra(INTENT_PARAMS, params);
+        intent.putExtra(INTENT_PARAMS, loginObj);
         if (isAndroid21()) {
             //android 5.0+使用转场动画
             ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(activity);

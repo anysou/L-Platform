@@ -21,6 +21,12 @@
             android:name="com.lu.platform.app.share.ShareBaseActivity"
             android:launchMode="singleTop"
             android:theme="@style/share.AppTheme" />
+
+        <activity
+            android:name=".app.login.LoginBaseActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/share.AppTheme" />
+
         <activity
             android:name="com.lu.platform.sdk.alipay.sdk.pay.H5PayDemoActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
@@ -46,8 +52,10 @@
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="tencent1106234694" />
             </intent-filter>
         </activity>
