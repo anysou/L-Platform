@@ -68,7 +68,7 @@ public class ShareDemoActivity extends AppCompatActivity implements ShareObserve
                 .setPagePath("pages/index")
                 .setSimpleImage("http://p83nf214c.bkt.clouddn.com/1525416286.jpg")
                 .build();
-        new WXShareTool().shareMiniProgram(params);
+        ShareUtil.shareMiniProgram(params);
     }
 
     /**
@@ -78,7 +78,7 @@ public class ShareDemoActivity extends AppCompatActivity implements ShareObserve
      */
     public void openMiniProgram(View v) {
         //path填写要打开的小程序页面
-        new WXShareTool().launchMiniProgram("pages/index");
+       ShareUtil.openMiniProgram("pages/index");
     }
 
     /**
@@ -108,7 +108,7 @@ public class ShareDemoActivity extends AppCompatActivity implements ShareObserve
 
     @Override
     public void onShareSuccess() {
-
+        //分享成功
     }
 
     @Override

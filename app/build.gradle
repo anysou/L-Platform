@@ -34,4 +34,6 @@ dependencies {
     implementation "com.android.support:appcompat-v7:${SUPPORT_SDK_VERSION}"
     implementation project(':lib-platform')
     annotationProcessor project(':lib-processor')
+//    implementation 'com.lu.lib:lplatform:1.0'
+//    annotationProcessor 'com.lu.lib:lplatform-processor:1.0'
 }
