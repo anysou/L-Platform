@@ -17,7 +17,7 @@ android {
 
 dependencies {
 	...
-    implementation 'com.lu.lib:lplatform:1.0'
+    implementation 'com.lu.lib:lplatform:1.0.2'
     annotationProcessor 'com.lu.lib:lplatform-processor:1.0'
 }
 ```
