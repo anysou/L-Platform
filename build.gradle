@@ -45,7 +45,7 @@ ext {
     uploadModule = 0//上传lib-platform
 //    uploadModule = 1//上传lib-processor
     //SDK版本
-    lib_Version = '1.0'
+    lib_Version = '1.0.2'
 //    ================================
     lib_module = ''//要上传的module
     if (uploadModule == 0) {

@@ -35,7 +35,7 @@ import java.util.List;
  * @Description: ShareBaseActivity  分享的选择页面
  */
 
-public class ShareBaseActivity extends PlatformBaseDialog implements ShareObserver,ShareChannelAdapter.OnChannelClickListener {
+public class ShareBaseActivity extends PlatformBaseDialog implements ShareObserver, ShareChannelAdapter.OnChannelClickListener {
 
     protected ShareParams mParams;
     private RecyclerView rvChannelListV;
@@ -99,15 +99,13 @@ public class ShareBaseActivity extends PlatformBaseDialog implements ShareObserv
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        if (mShareDelegate != null)
-            mShareDelegate.onNewIntent(intent);
+        mShareDelegate.onNewIntent(intent);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (mShareDelegate != null)
-            mShareDelegate.onActivityResult(requestCode, resultCode, data);
+        mShareDelegate.onActivityResult(requestCode, resultCode, data);
     }
 
     private List<ShareChannelBean> getChannelData() {
@@ -148,8 +146,8 @@ public class ShareBaseActivity extends PlatformBaseDialog implements ShareObserv
             mShareDelegate.shareSinaWB();
         } else {
             reload(channelBean);
+            finish();
         }
-        finish();
     }
 
     /**

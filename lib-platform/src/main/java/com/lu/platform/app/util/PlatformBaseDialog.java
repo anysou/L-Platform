@@ -26,7 +26,6 @@ public abstract class PlatformBaseDialog extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.share_AppTheme);
         if (isAndroid21()) {
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         }
